@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BUY PANEL LEWAT BOT</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #e0eafc, #cfdef3);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(1deg, #2c3e50, #0984e3);
+      color: white;
+      padding: 2px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #dfe6ff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(5, 5, 5, 0.3);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.4rem;
+      color: #2d3436;
+    }
+
+    .card .icon {
+      font-size: 42px;
+      color: #6c5ce7;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #990033;
+      margin: 12px 0 20px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #2c3e50, #0984e3);
+      color: white;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #00b894, #6c5ce7);
+    }
+
+    .contact-card {
+      background: white;
+      margin: 30px auto 60px;
+      max-width: 500px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      margin-top: 0;
+      color: #2d3436;
+    }
+
+    .contact-card p {
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .contact-card a:hover {
+      background: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DIKXZ BOTZ</h1>
+    <h6>WEBSITE INI BUY NYA KE BOT</h6>
+  </header>
+
+  <div class="container" id="product-list"></div>
+
+  <script>
+    const waNumber = "6282121654303";
+
+    const products = [
+      { name: "PANEL 1GB - 10GB", price: "Rp 5.000 / bulan", msg: ".buypanel 5gb" },
+      { name: "PANEL UNLIMITED", price: "Rp 11.000 / bulan", msg: ".buypanel unli" },
+      { name: "ADMIN PANEL / PT PANEL", price: "Rp 16.000 / 24.000", msg: ".buyadp" },
+      { name: "VPS 2GB - 16GB", price: "Rp 40.000 / bulan", msg: ".buyvps" },
+      { name: "PULSA ALL OPERATOR", price: "CEK DI BOT", msg: ".isipulsa" },
+    ];
+
+    const container = document.getElementById("product-list");
+
+    products.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="icon"></div>
+        <h3>${item.name}</h3>
+        <p class="price">${item.price}</p>
+        <a class="btn" target="_blank" href="https://wa.me/${waNumber}?text=${encodeURIComponent(item.msg)}">Beli Sekarang</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
